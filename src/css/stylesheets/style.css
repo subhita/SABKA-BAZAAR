@@ -15,6 +15,9 @@ html {
     font-size: 20px;
     /* text-rendering: optimizeLegibility; */
 }
+nav {
+    border-bottom: 1px solid #efefef;
+}
 .row {
     max-width: 1140px;
     margin: 0 auto 0 auto;
@@ -28,13 +31,13 @@ section {
 }
 
 .logo {
-    height: 100px;
+    height: 70px;
     width: auto;
     float: left;
     /* margin-top: 20px; */
 }
 .cart {
-    height: 100px;
+    height: 32px;
     width: auto;
     margin-top: 16px;
 }
@@ -45,7 +48,10 @@ section {
 .cart-nav {
 }
 .hero-link-box {
-
+    flex: 1;
+}
+.hero-cart {
+    flex: 0;
 }
 ul {
     display: flex;
@@ -56,7 +62,7 @@ li a {
     
 }
 li:last-child {
-    margin-left: 16px;
+    margin-left: 32px;
 }
 .clearfix::after {
     content: "";
