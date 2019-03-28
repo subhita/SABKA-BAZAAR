@@ -1,12 +1,45 @@
-const path = require('path');
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import LiveReloadPlugin from 'webpack-livereload-plugin'
+import path from 'path';
+export default  {
+  entry: path.resolve(__dirname,'src/js/index.js'),
+  output: {
+    path: '/',
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        use: 'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules/
+      },
+      {
+        use: ['style-loader', 'css-loader'],
+        test: /\.css$/
+      },
+      {
+               test: /\.scss$/,
+        use: [{
+            loader: "style-loader"
+        }, {
+            loader: "css-loader", options: {
+                sourceMap: true
+            }
+        }, {
+            loader: "sass-loader", options: {
+                sourceMap: true
+            }
+        }]
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname,'src/views/home.html')
+    }),
+    new LiveReloadPlugin()
+  ]
+};
 
-module.exports = {
-    entry: './src/js/index.js',
-    output: {
-        path: path.resolve(__dirname, 'dist/js'),
-        filename: 'bundle.js'
-    },
-    devServer: {
-      contentBase: './dist'
-    }
-  };

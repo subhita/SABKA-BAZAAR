@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:400,600,700" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="./../../css/stylesheets/style.css">
+        <title>SABKA BAZAAR</title>
+    </head>
+    <body>
+        <header>
+                <nav>
+                    <div class="row clearfix">
+                        <img src="./../../images/logo_2x.png" alt="sabka-bazaar logo" class="logo">
+                        <div class="hero__link__box">
+                            <ul class="main-nav">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Products</a></li>
+                            </ul>
+                        </div>
+                        <div class="hero__cart">
+                            <ul class="cart-nav">
+                                <li><a href="/signIn">Signin</a></li>
+                                <li><a href="/Register">Register</a></li>
+                            </ul>
+                            <span class="hero__cart__box">
+                                <img src="./../../images/cart.svg" alt="cart" class="cart">
+                                <p>0 items</p>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+        </header>
+        <section class="home__section">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="./../../images/offers/offer5.jpg" alt="independence day sale" class="sale" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img src="./../../images/offers/offer4.jpg" alt="independence day sale" class="sale" style="width:100%">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img src="./../../images/offers/offer3.jpg" alt="independence day sale" class="sale" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./../../images/offers/offer2.jpg" alt="independence day sale" class="sale" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./../../images/offers/offer1.jpg" alt="independence day sale" class="sale" style="width:100%">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                        <span class="dot" onclick="currentSlide(4)"></span> 
+                        <span class="dot" onclick="currentSlide(5)"></span> 
+                    </div>
+            </div>
+        </section>
+        <section class="home__section">
+            <div class="row">
+                <figure class="product__box">
+                        <img src="./../../images/category/fruits.png" alt="fruits & vegetables" class="product__items">
+                </figure>
+                <div class="product__content">
+                    <h2>Fruits & Vegetables</h2>
+                    <p>A variety of fruits and vegetables.</p>
+                    <button><span>Explore Fruit-and-veg</span></button>
+                </div>
+            </div>
+        </section>
+        <section class="home__section">
+            <div class="row">
+                <div class="product__content">
+                        <h2>Bakery Cakes & Dairy</h2>
+                        <p>The best cupcakes, cookies, cakes, pies, cheesecakes, fresh bread, biscotti,muffins, bagles, fresh coffee, milk and more.</p>
+                        <button><span>Explore bakery-cakes-dairy</span></button>
+                    </div>
+                <figure class="product__box">
+                    <img src="./../../images/category/bakery.png" alt="bakery product" class="product__items">
+                </figure>
+            </div>
+        </section>
+        <section class="home__section">
+            <div class="row">
+                <figure class="product__box">
+                    <img src="./../../images/category/beverages.png" alt="beverages product" class="product__items">
+                </figure>
+                <div class="product__content">
+                    <h2>Beverages</h2>
+                    <p>Our beverages department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more.</p>
+                    <button><span>Explore Beverages</span></button>
+                </div>
+            </div>
+        </section>
+        <section class="home__section">
+            <div class="row">
+                <div class="product__content">
+                    <h2>Beauty & Hygiene</h2>
+                    <p>Buy beauty and personal care products online in india at best prices.</p>
+                    <button><span>Explore Beauty-hygiene</span></button>
+                    </div>
+                <figure class="product__box">
+                    <img src="./../../images/category/beauty.png" alt="beauty product" class="product__items">
+                </figure>
+            </div>
+        </section>
+        <section class="home__section">
+            <div class="row">
+                <figure class="product__box">
+                    <img src="./../../images/category/baby.png" alt="baby product" class="product__items">
+                </figure>
+                <div class="product__content">
+                    <h2>Baby care</h2>
+                    <p>Shop online for Baby Products, Diapers, Skin Care Products, etc.</p>
+                    <button><span>Explore baby</span></button>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Copyright &copy; 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd.</p>
+        </footer>
+
+        <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+    </body>
+</html>
