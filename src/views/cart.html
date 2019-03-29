@@ -23,37 +23,40 @@
                                 <li><a href="/Register">Register</a></li>
                             </ul>
                             <span class="hero__cart__box">
-                                    <a href="/Cart">
-                                        <img src="./../../images/cart.svg" alt="cart" class="cart">
-                                        <p>0 items</p>
-                                        </a>
+                                <img src="./../../images/cart.svg" alt="cart" class="cart">
+                                <p>0 items</p>
                             </span>
                         </div>
                     </div>
                 </nav>
         </header>
-        <section>
-            <div class="sign__in__container">
-                <div class="sign__in__content">
-                    <h2>Login</h2>
-                    <p>Get access to your Orders, Wishlist and Recommendations.</p>
+        <!-- <section> -->
+            <div class="cart__container">
+                <div class="cart__content">
+                    <h2>My Cart</h2><span>(0 item)</span>
                 </div>
-                <div class="sign__in__form">
-                    <form>
-                        <div class="form__input">
-                            <input type="email" name="email" id="email" required>
-                            <label>Email</label>
-                        </div>
-                        <div class="form__input">
-                            <input type="password" name="password" id="password" required>
-                            <label>Password</label>
-                        </div>
-                        <div class="form__input">
-                            <button>Login</button>
-                        </div>
-                    </form>
+                <div class="cart__content__item">
+                    <figure>
+                    <img src="./../images/products/fruit-n-veg/apple.jpg" alt="fruits" class="items">
+                </figure>
+                    <div class="cart__content__items">
+                        <h3>Apple - Washington, Reguler, 4pcs</h3>
+                        <p>Rs 187</p>
+                    </div>
+                    <span>Rs 187</span>
+                </div>
+                <div class="cart__content__price">
+                    <img src="./../images/lowest-price.png" alt="lowest price" class="lowest__price">
+                    <span>You won't find it cheaper anywhere.</span>
+                </div>
+                <div class="cart__checkout__btn">
+                        <p>Promto code can be applied on payment page.</p>
+                    <button class="checkout__btn">
+                        <span>Proceed to checkout</span>
+                        <span>Rs. 187</span>
+                    </button>
                 </div>
             </div>
-        </section>
+        <!-- </section> -->
     </body>
 </html>

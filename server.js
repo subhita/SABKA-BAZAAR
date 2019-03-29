@@ -23,7 +23,15 @@ app.get('/Register', function(req, res) {
 
   res.sendFile(path.join(__dirname + '/src/views/register.html'));
 });
+app.get('/Cart', function(req, res) {
+
+  res.sendFile(path.join(__dirname + '/src/views/cart.html'));
+});
+app.get('/product-list', function(req, res) {
+
+  res.sendFile(path.join(__dirname + '/src/views/product-list.html'));
+});
 
 app.listen(5000, () => {
-  console.log('Listening');
+  console.log('Listening at port 5000');
 });
