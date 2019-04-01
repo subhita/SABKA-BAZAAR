@@ -1,106 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Dosis:400,600,700" rel="stylesheet" type="text/css">
-        <link type="text/css" rel="stylesheet" href="./../../css/stylesheets/style.css">
-        <title>SABKA BAZAAR</title>
-    </head>
-    <body>
-        <header>
-                <nav>
-                    <div class="row clearfix">
-                        <img src="./../../images/logo_2x.png" alt="sabka-bazaar logo" class="logo">
-                        <div class="hero__link__box">
-                            <ul class="main-nav">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Products</a></li>
-                            </ul>
-                        </div>
-                        <div class="hero__cart">
-                            <ul class="cart-nav">
-                                <li><a href="/signIn">Signin</a></li>
-                                <li><a href="/Register">Register</a></li>
-                            </ul>
-                            <span class="hero__cart__box">
-                                    <a href="/Cart">
-                                        <img src="./../../images/cart.svg" alt="cart" class="cart">
-                                        <p>0 items</p>
-                                        </a>
-                            </span>
-                        </div>
-                    </div>
-                </nav>
-        </header>
-        <section class="product__list__section">
-            <div class="product__list__container">
-                <div class="product__list">
-                    <ul>
-                        <li>Fruits & Vegetables</li>
-                        <li>Bakery Cakes & Dairy</li>
-                        <li>Beverages</li>
-                        <li>Beauty and Hygiene</li>
-                        <li>Baby Care</li>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,600,700" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="./../css/stylesheets/style.css">
+    <title>SABKA BAZAAR</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="row-container clearfix">
+                <img src="img/logo_2x.png" alt="sabka-bazaar logo" class="logo">
+
+                <div class="hero__cart">
+                    <span class="hero__cart__box">
+                        <a href="/Cart">
+                            <img src="img/cart.svg" alt="cart" class="cart">
+                            <p>0 items</p>
+                        </a>
+                        <a class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="hero__link__box mobile-nav" id="mobileNav">
+                    <ul class="main-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                    </ul>
+                    <ul class="cart-nav">
+                        <li><a href="/signIn">Signin</a></li>
+                        <li><a href="/Register">Register</a></li>
                     </ul>
                 </div>
-                <div class="product__item__container">
+            </div>
+        </nav>
+    </header>
+
+    <section class="product__list__section">
+        <div class="product__list__container">
+            <div class="product__list">
+                <ul>
+                    <li>Fruits & Vegetables</li>
+                    <li>Bakery Cakes & Dairy</li>
+                    <li>Beverages</li>
+                    <li>Beauty and Hygiene</li>
+                    <li>Baby Care</li>
+                </ul>
+            </div>
+            <div class="product__item__container">
+                <div class="product__item__col">
                     <div class="product__list__item">
-                    <h5>Fresh kiwi - Green 3 pcs</h5>
-                    <figure>
-                        <img src="./../images/products/fruit-n-veg/kiwi-green.jpg" alt="" class="pl__list__item">
-                    </figure>
-                    <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with tiny. edible black seeds</p>
-                    <div class="item__price">
-                        <span>MRP Rs87</span>
-                        <button><span>Buy Now</span></button>
+                        <h5>Fresh kiwi - Green 3 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/kiwi-green.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with
+                                tiny. edible black seeds</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Apple - Washington, Regular 4 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/apple.jpg" alt="" class="pl__list__item">
+                            </figure>
+                            <p>The bright red colored and heart shaped Washington apples are crunchy. juicy and slightly
+                                sweet.
+                                Washington Apples are a natural</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Fresho Pomegranate - Peeled, 500 gm</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/pomegrante.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>Pomegranate variety has a glossy. vibrant and soft ruby-red skin. The inside of the fruit
+                                is
+                                divided into compartments by thin while</p>
+                            
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Capsicum - Green, 1kg</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/capsicum-green.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>Leaving a moderately pungent taste on the tongue. Green capsicums, also known as green
+                                peppers
+                                are bell shaped, medium -sized fruit pods.</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                            <h5>Apple - Washington, Regular 4 pcs</h5>
+                            <div class="pl__list">
+                                <figure>
+                                    <img src="img/products/fruit-n-veg/apple.jpg" alt="" class="pl__list__item">
+                                </figure>
+                                <p>The bright red colored and heart shaped Washington apples are crunchy. juicy and slightly
+                                    sweet.
+                                    Washington Apples are a natural</p>
+    
+    
+                                <div class="item__price">
+                                    <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                                </div>
+    
+                            </div>
+                        </div>
+                </div>
+                <div class="product__item__col">
+                    <div class="product__list__item">
+                        <h5>Fresh kiwi - Green 3 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/kiwi-green.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with
+                                tiny.
+                                edible black seeds</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Fresh kiwi - Green 3 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/kiwi-green.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with
+                                tiny. edible black seeds</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Apple - Washington, Regular 4 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/apple.jpg" alt="" class="pl__list__item">
+                            </figure>
+                            <p>The bright red colored and heart shaped Washington apples are crunchy. juicy and slightly
+                                sweet.
+                                Washington Apples are a natural</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Fresho Pomegranate - Peeled, 500 gm</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/pomegrante.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>Pomegranate variety has a glossy. vibrant and soft ruby-red skin. The inside of the fruit
+                                is
+                                divided into compartments by thin while</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                            <h5>Apple - Washington, Regular 4 pcs</h5>
+                            <div class="pl__list">
+                                <figure>
+                                    <img src="img/products/fruit-n-veg/apple.jpg" alt="" class="pl__list__item">
+                                </figure>
+                                <p>The bright red colored and heart shaped Washington apples are crunchy. juicy and slightly
+                                    sweet.
+                                    Washington Apples are a natural</p>
+    
+    
+                                <div class="item__price">
+                                    <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                                </div>
+    
+                            </div>
+                        </div>
+                </div>
+                <div class="product__item__col">
+                    <div class="product__list__item">
+                        <h5>Capsicum - Green, 1kg</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/capsicum-green.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>Leaving a moderately pungent taste on the tongue. Green capsicums, also known as green
+                                peppers
+                                are bell shaped, medium -sized fruit pods.</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Fresh kiwi - Green 3 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/kiwi-green.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with
+                                tiny.
+                                edible black seeds</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Fresh kiwi - Green 3 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/kiwi-green.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with
+                                tiny.
+                                edible black seeds</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Fresh kiwi - Green 3 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/kiwi-green.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with
+                                tiny.
+                                edible black seeds</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="product__list__item">
-                        <h5>Apple - Washington, Regular 4 pcs</h5>
-                        <figure>
-                            <img src="./../images/products/fruit-n-veg/apple.jpg" alt="" class="pl__list__item">
-                        </figure>
-                        <p>The bright red colored and heart shaped Washington apples are crunchy. juicy and slightly sweet. Washington Apples are a natural</p>
-                        <div class="item__price">
-                            <span>MRP Rs87</span>
-                            <button><span>Buy Now</span></button>
+                <div class="product__item__col">
+                    <div class="product__list__item">
+                        <h5>Fresh kiwi - Green 3 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/kiwi-green.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+                            <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with
+                                tiny.
+                                edible black seeds</p>
+
+
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
                         </div>
                     </div>
                     <div class="product__list__item">
-                            <h5>Fresho Pomegranate - Peeled, 500 gm</h5>
+                        <h5>Fresh kiwi - Green 3 pcs</h5>
+                        <div class="pl__list">
                             <figure>
-                                <img src="./../images/products/fruit-n-veg/pomegrante.jpg" alt="" class="pl__list__item">
+                                <img src="img/products/fruit-n-veg/kiwi-green.jpg" alt=""
+                                    class="pl__list__item">
                             </figure>
-                            <p>Pomegranate variety has a glossy. vibrant and soft ruby-red skin. The inside of the fruit is divided into compartments by thin while</p>
+                            <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with
+                                tiny. edible black seeds</p>
+
+
                             <div class="item__price">
-                                <span>MRP Rs87</span>
-                                <button><span>Buy Now</span></button>
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
                             </div>
+
                         </div>
-                        <div class="product__list__item">
-                                <h5>Capsicum - Green, 1kg</h5>
-                                <figure>
-                                    <img src="./../images/products/fruit-n-veg/capsicum-green.jpg" alt="" class="pl__list__item">
-                                </figure>
-                                <p>Leaving a moderately pungent taste on the tongue. Green capsicums, also known as green peppers are bell shaped, medium -sized fruit pods.</p>
-                                <div class="item__price">
-                                    <span>MRP Rs87</span>
-                                    <button><span>Buy Now</span></button>
-                                </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Apple - Washington, Regular 4 pcs</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/apple.jpg" alt="" class="pl__list__item">
+                            </figure>
+                            <p>The bright red colored and heart shaped Washington apples are crunchy. juicy and slightly
+                                sweet.
+                                Washington Apples are a natural</p>
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
                             </div>
-                            <div class="product__list__item">
-                                    <h5>Fresh kiwi - Green 3 pcs</h5>
-                                    <figure>
-                                        <img src="./../images/products/fruit-n-veg/kiwi-green.jpg" alt="" class="pl__list__item">
-                                    </figure>
-                                    <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with tiny. edible black seeds</p>
-                                    <div class="item__price">
-                                        <span>MRP Rs87</span>
-                                        <button><span>Buy Now</span></button>
-                                    </div>
-                                </div>
+
+                        </div>
+                    </div>
+                    <div class="product__list__item">
+                        <h5>Fresho Pomegranate - Peeled, 500 gm</h5>
+                        <div class="pl__list">
+                            <figure>
+                                <img src="img/products/fruit-n-veg/pomegrante.jpg" alt=""
+                                    class="pl__list__item">
+                            </figure>
+
+                            <p>Pomegranate variety has a glossy. vibrant and soft ruby-red skin. The inside of the fruit
+                                is
+                                divided into compartments by thin while</p>
+                            <div class="item__price">
+                                <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </body>
+        </div>
+
+        </div>
+    </section>
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("mobileNav");
+            if (x.style.display === "none") {
+                x.style.display = "inline";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
 </html>

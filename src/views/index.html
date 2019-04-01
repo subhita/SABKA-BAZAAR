@@ -1,33 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Dosis:400,600,700" rel="stylesheet" type="text/css">
-        <link type="text/css" rel="stylesheet" href="./../../css/stylesheets/style.css">
+        <link type="text/css" rel="stylesheet" href="./../css/stylesheets/style.css">
         <title>SABKA BAZAAR</title>
     </head>
     <body>
         <header>
                 <nav>
-                    <div class="row clearfix">
-                        <img src="./../../images/logo_2x.png" alt="sabka-bazaar logo" class="logo">
-                        <div class="hero__link__box">
-                            <ul class="main-nav">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Products</a></li>
-                            </ul>
-                        </div>
+                    <div class="row-container clearfix">
+                        <img src="img/logo_2x.png" alt="sabka-bazaar logo" class="logo">
+                        
                         <div class="hero__cart">
-                            <ul class="cart-nav">
-                                <li><a href="/signIn">Signin</a></li>
-                                <li><a href="/Register">Register</a></li>
-                            </ul>
                             <span class="hero__cart__box">
                                 <a href="/Cart">
-                                <img src="./../../images/cart.svg" alt="cart" class="cart">
+                                <img src="img/cart.svg" alt="cart" class="cart">
                                 <p>0 items</p>
                                 </a>
+                                <a  class="icon" onclick="myFunction()">
+                                    <i class="fa fa-bars"></i>
+                                  </a>
                             </span>
+                        </div>
+                        <div class="hero__link__box mobile-nav" id="mobileNav">
+                            <ul class="main-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="product-list.html">Products</a></li>
+                            </ul>
+                            <ul class="cart-nav">
+                                <li><a href="signin.html">Signin</a></li>
+                                <li><a href="register.html">Register</a></li>
+                            </ul>
                         </div>
                     </div>
                 </nav>
@@ -35,21 +41,21 @@
         <section class="home__section">
                 <div class="slideshow-container">
                     <div class="mySlides fade">
-                        <img src="./../../images/offers/offer5.jpg" alt="independence day sale" class="sale" style="width:100%">
+                        <img src="img/offers/offer5.jpg" alt="independence day sale" class="sale" style="width:100%">
                     </div>
                     
                     <div class="mySlides fade">
-                        <img src="./../../images/offers/offer4.jpg" alt="independence day sale" class="sale" style="width:100%">
+                        <img src="img/offers/offer4.jpg" alt="independence day sale" class="sale" style="width:100%">
                     </div>
                     
                     <div class="mySlides fade">
-                        <img src="./../../images/offers/offer3.jpg" alt="independence day sale" class="sale" style="width:100%">
+                        <img src="img/offers/offer3.jpg" alt="independence day sale" class="sale" style="width:100%">
                     </div>
                     <div class="mySlides fade">
-                        <img src="./../../images/offers/offer2.jpg" alt="independence day sale" class="sale" style="width:100%">
+                        <img src="img/offers/offer2.jpg" alt="independence day sale" class="sale" style="width:100%">
                     </div>
                     <div class="mySlides fade">
-                        <img src="./../../images/offers/offer1.jpg" alt="independence day sale" class="sale" style="width:100%">
+                        <img src="img/offers/offer1.jpg" alt="independence day sale" class="sale" style="width:100%">
                     </div>
                     
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -68,7 +74,7 @@
             <div class="row">
                     <div class="product__box">
                 <figure>
-                        <img src="./../../images/category/fruits.png" alt="fruits & vegetables" class="product__items">
+                        <img src="img/category/fruits.png" alt="fruits & vegetables" class="product__items">
                 </figure>
             </div>
                 <div class="product__content">
@@ -87,14 +93,14 @@
                         <button><span>Explore bakery-cakes-dairy</span></button>
                     </div>
                 <figure class="product__box">
-                    <img src="./../../images/category/bakery.png" alt="bakery product" class="product__items">
+                    <img src="img/category/bakery.png" alt="bakery product" class="product__items">
                 </figure>
             </div>
         </section>
         <section class="home__section">
             <div class="row">
                 <figure class="product__box">
-                    <img src="./../../images/category/beverages.png" alt="beverages product" class="product__items">
+                    <img src="img/category/beverages.png" alt="beverages product" class="product__items">
                 </figure>
                 <div class="product__content">
                     <h2>Beverages</h2>
@@ -111,14 +117,14 @@
                     <button><span>Explore Beauty-hygiene</span></button>
                     </div>
                 <figure class="product__box">
-                    <img src="./../../images/category/beauty.png" alt="beauty product" class="product__items">
+                    <img src="img/category/beauty.png" alt="beauty product" class="product__items">
                 </figure>
             </div>
         </section>
         <section class="home__section">
             <div class="row">
                 <figure class="product__box">
-                    <img src="./../../images/category/baby.png" alt="baby product" class="product__items">
+                    <img src="img/category/baby.png" alt="baby product" class="product__items">
                 </figure>
                 <div class="product__content">
                     <h2>Baby care</h2>
@@ -157,6 +163,14 @@
                   }
                   slides[slideIndex-1].style.display = "block";  
                   dots[slideIndex-1].className += " active";
+                }
+                function myFunction() {
+                var x = document.getElementById("mobileNav");
+                if (x.style.display === "none") {
+                    x.style.display = "inline";
+                } else {
+                    x.style.display = "none";
+                }
                 }
                 </script>
     </body>
