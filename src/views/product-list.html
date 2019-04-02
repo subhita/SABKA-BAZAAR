@@ -19,7 +19,7 @@
                     <span class="hero__cart__box">
                         <a href="/Cart">
                             <img src="img/cart.svg" alt="cart" class="cart">
-                            <p>0 items</p>
+                            <p>0</p><p>items</p>
                         </a>
                         <a class="icon" onclick="myFunction()">
                             <i class="fa fa-bars"></i>
@@ -27,15 +27,15 @@
                     </span>
                 </div>
                 <div class="hero__link__box mobile-nav" id="mobileNav">
-                    <ul class="main-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                    </ul>
-                    <ul class="cart-nav">
-                        <li><a href="/signIn">Signin</a></li>
-                        <li><a href="/Register">Register</a></li>
-                    </ul>
-                </div>
+                            <ul class="main-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="product-list.html">Products</a></li>
+                            </ul>
+                            <ul class="cart-nav">
+                                <li><a href="signin.html">Signin</a></li>
+                                <li><a href="register.html">Register</a></li>
+                            </ul>
+                        </div>
             </div>
         </nav>
     </header>
@@ -43,13 +43,17 @@
     <section class="product__list__section">
         <div class="product__list__container">
             <div class="product__list">
-                <ul>
-                    <li>Fruits & Vegetables</li>
-                    <li>Bakery Cakes & Dairy</li>
-                    <li>Beverages</li>
-                    <li>Beauty and Hygiene</li>
-                    <li>Baby Care</li>
-                </ul>
+                    <ul id="menu">
+                        <input id="check01" type="checkbox" name="menu" />
+                        <label for="check01">Product Menu</label>
+                        <ul class="submenu">
+                            <li><a href="#">Fruits & Vegetables</a></li>
+                            <li><a href="#">Bakery Cakes & Dairy</a></li>
+                            <li><a href="#">Beverages</a></li>
+                            <li><a href="#">Beauty and Hygiene</a></li>
+                            <li><a href="#">Baby Care</a></li>
+                        </ul>
+                  </ul>
             </div>
             <div class="product__item__container">
                 <div class="product__item__col">
@@ -62,12 +66,9 @@
                             </figure>
                             <p>kiwis are oval shape with a brownish outer skin. The flesh is bring green and juicy with
                                 tiny. edible black seeds</p>
-
-
                             <div class="item__price">
                                 <a href="#" class="btn">Buy Now<span>MRP Rs87</span></a>
                             </div>
-
                         </div>
                     </div>
                     <div class="product__list__item">
@@ -377,17 +378,46 @@
 
         </div>
     </section>
-    <script>
+    <footer class="footer">
+            <p>Copyright &copy; 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd.</p>
+        </footer>
 
-        function myFunction() {
-            var x = document.getElementById("mobileNav");
-            if (x.style.display === "none") {
-                x.style.display = "inline";
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
+        <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                function myFunction() {
+                var x = document.getElementById("mobileNav");
+                if (x.style.display === "none") {
+                    x.style.display = "inline";
+                } else {
+                    x.style.display = "none";
+                }
+                }
+                </script>
 </body>
 
 </html>
